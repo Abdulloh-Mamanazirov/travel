@@ -233,7 +233,7 @@ const index = () => {
 
       <div className="px-5 flex justify-between items-center xl:h-[500px]">
         <div
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="700"
           className="xl:w-[500px] w-1/3 lg:block hidden"
         >
@@ -261,7 +261,7 @@ const index = () => {
           </button>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-duration="700"
           className="xl:w-[500px] w-1/3 lg:block hidden"
         >

@@ -21,7 +21,8 @@ const index = () => {
           </p>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-right"
+          data-aos-delay="300"
           className="w-full flex flex-col-reverse md:flex-col space-y-4 text-left"
         >
           <div className="flex flex-col space-y-4">

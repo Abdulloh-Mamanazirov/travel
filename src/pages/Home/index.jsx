@@ -119,7 +119,7 @@ const index = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="sidebar md:hidden bg-white py-5">
+          <div className="sidebar md:hidden bg-white pt-5 pb-20">
             <div className="flex flex-col gap-5 justify-center items-center">
               <Link
                 onClick={() => {
