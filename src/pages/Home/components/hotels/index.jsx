@@ -4,7 +4,11 @@ const index = () => {
       <div className="my-16 text-center px-3">
         <h1 className="text-4xl font-bold font-serif">Hotels</h1>
         <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-10 my-10 justify-items-center items-center pb-10 border-b">
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="100"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/95/07/limak-eurasia-luxury.jpg?w=700&h=-1&s=1"
@@ -28,7 +32,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a1/9c/80/essentia-luxury-hotel.jpg?w=700&h=-1&s=1"
@@ -52,7 +60,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="300"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://content.r9cdn.net/rimg/himg/87/41/9b/ice-415319-100973255-620733.jpg"
@@ -76,7 +88,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="400"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://www.hunguesthotels.hu/_img/16806797506206_s1.jpg"
@@ -100,7 +116,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="100"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/95/07/limak-eurasia-luxury.jpg?w=700&h=-1&s=1"
@@ -124,7 +144,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a1/9c/80/essentia-luxury-hotel.jpg?w=700&h=-1&s=1"
@@ -148,7 +172,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="300"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://content.r9cdn.net/rimg/himg/87/41/9b/ice-415319-100973255-620733.jpg"
@@ -172,7 +200,11 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="400"
+            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
+          >
             <img
               className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
               src="https://www.hunguesthotels.hu/_img/16806797506206_s1.jpg"
@@ -200,14 +232,21 @@ const index = () => {
       </div>
 
       <div className="px-5 flex justify-between items-center xl:h-[500px]">
-        <div className="xl:w-[500px] w-1/3 lg:block hidden">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          className="xl:w-[500px] w-1/3 lg:block hidden"
+        >
           <img
             className="aspect-video w-full h-full object-cover"
             src="https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg"
             alt=""
           />
         </div>
-        <div className="xl:w-[500px] p-5 text-center space-y-5 sm:space-y-2">
+        <div
+          data-aos="fade-up"
+          className="xl:w-[500px] p-5 text-center space-y-5 sm:space-y-2"
+        >
           <h1 className="md:text-xl sm:text-sm">Lorem ipsum dolor sit.</h1>
           <h2 className="md:text-4xl sm:text-base">
             Lorem ipsum dolor sitamet.
@@ -221,7 +260,11 @@ const index = () => {
             Book Now
           </button>
         </div>
-        <div className="xl:w-[500px] w-1/3 lg:block hidden">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="700"
+          className="xl:w-[500px] w-1/3 lg:block hidden"
+        >
           <img
             className="aspect-video w-full h-full object-cover"
             src="https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg"

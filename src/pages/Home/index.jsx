@@ -1,3 +1,4 @@
+import AOS from "aos";
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
@@ -37,6 +38,11 @@ const index = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
   }, []);
 
   let navbarClasses = ["navbar"];

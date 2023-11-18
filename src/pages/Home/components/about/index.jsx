@@ -5,7 +5,7 @@ const index = () => {
     <div className="w-4/5 m-auto cursor-default my-10">
       <h1 className="text-4xl font-bold font-serif text-center">About</h1>
       <div className="w-full m-auto flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-10">
-        <div className="w-full space-y-5">
+        <div data-aos="fade-right" className="w-full space-y-5">
           <img
             className="w-full drop-shadow-2xl rounded-lg border-8 border-stones-700 cursor-pointer opacity-80 hover:opacity-100 duration-200"
             src="https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg"
@@ -20,7 +20,10 @@ const index = () => {
             consectetur!
           </p>
         </div>
-        <div className="w-full flex flex-col-reverse md:flex-col space-y-4 text-left">
+        <div
+          data-aos="fade-left"
+          className="w-full flex flex-col-reverse md:flex-col space-y-4 text-left"
+        >
           <div className="flex flex-col space-y-4">
             <h2 className="font-bold">Lorem ipsum dolor sit.</h2>
             <h1 className="font-bold text-2xl">Lorem ipsum dolor sitamet.</h1>
@@ -38,7 +41,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className="w-full h-[400px] my-10 relative">
+      <div data-aos="fade" className="w-full h-[400px] my-10 relative">
         <img
           className="w-full h-full object-cover "
           src="https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg"

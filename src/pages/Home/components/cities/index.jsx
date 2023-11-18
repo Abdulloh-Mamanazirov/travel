@@ -7,6 +7,7 @@ const index = () => {
       <div style={{ transition: "all 900ms ease-in-out 0s", opacity: 1 }}>
         <div className="grid lg:grid-cols-10 gap-2 md:grid-cols-12">
           <div
+            data-aos="fade-up"
             className="lg:col-span-4 md:col-span-5 sx:col-span-12 md:justify-center h-80 grid p-4 justify-center items-center"
             style={{
               backgroundImage: `url("https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSWpM_hQozSYzMswAjEAjY6nQMr6nsfd7OqoV5i4gKmBGOVysC8c7WpP9V9vh-2sG82yEyIPMo03zHNRRNOX7iFigEic4FkxwFgwKUdOw")`,
@@ -15,6 +16,7 @@ const index = () => {
             }}
           ></div>
           <div
+            data-aos="fade-up"
             className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
               backgroundImage: `url("https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSWpM_hQozSYzMswAjEAjY6nQMr6nsfd7OqoV5i4gKmBGOVysC8c7WpP9V9vh-2sG82yEyIPMo03zHNRRNOX7iFigEic4FkxwFgwKUdOw")`,
@@ -22,9 +24,16 @@ const index = () => {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"></div>
-          <div className="lg:col-span-2 md:col-span-1 sx:col-span-12 bg-gradient-to-br from-blue-900 to-sky-600"></div>
           <div
+            data-aos="fade-up"
+            className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"
+          ></div>
+          <div
+            data-aos="fade-up"
+            className="lg:col-span-2 md:col-span-1 sx:col-span-12 bg-gradient-to-br from-blue-900 to-sky-600"
+          ></div>
+          <div
+            data-aos="fade-up"
             className="lg:col-span-2 lg:h-80 md:col-span-1 sx:col-span-12 sx:h-0 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
               backgroundImage: `url(
@@ -34,8 +43,12 @@ const index = () => {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"></div>
           <div
+            data-aos="fade-up"
+            className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"
+          ></div>
+          <div
+            data-aos="fade-up"
             className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
               backgroundImage: `url(
@@ -46,6 +59,7 @@ const index = () => {
             }}
           ></div>
           <div
+            data-aos="fade-up"
             className="lg:col-span-4 md:col-span-5 sx:col-span-12 md:justify-center h-80 grid p-4 justify-center items-center"
             style={{
               backgroundImage: `url(
@@ -56,6 +70,7 @@ const index = () => {
             }}
           ></div>
           <div
+            data-aos="fade-up"
             className="lg:col-span-4 md:col-span-5 sx:col-span-12 md:justify-center h-80 grid p-4 justify-center items-center"
             style={{
               backgroundImage: `url(
@@ -66,6 +81,7 @@ const index = () => {
             }}
           ></div>
           <div
+            data-aos="fade-up"
             className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
               backgroundImage: `url(
@@ -75,8 +91,14 @@ const index = () => {
               backgroundSize: " cover",
             }}
           ></div>
-          <div className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"></div>
-          <div className="lg:col-span-2 md:col-span-1 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"></div>
+          <div
+            data-aos="fade-up"
+            className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"
+          ></div>
+          <div
+            data-aos="fade-up"
+            className="lg:col-span-2 md:col-span-1 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-600"
+          ></div>
         </div>
       </div>
     </div>
