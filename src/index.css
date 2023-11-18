@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.navbar {
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #ffffff80;
+  position: fixed;
+  backdrop-filter: blur(0.5);
+}
+
+.sidebar {
+  /* Add your styles for the sidebar */
+}
