@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 
+// i18n
+import './i18n'
+
 // css
 import "swiper/css";
 import "swiper/css/pagination";

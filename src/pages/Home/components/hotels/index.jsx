@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 const index = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="my-16 text-center px-3">
-        <h1 className="text-4xl font-bold font-serif">Hotels</h1>
+        <h1 className="text-4xl font-bold font-serif">{t("hotels_title")}</h1>
         <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-10 my-10 justify-items-center items-center pb-10 border-b">
           <div
             data-aos="fade-right"

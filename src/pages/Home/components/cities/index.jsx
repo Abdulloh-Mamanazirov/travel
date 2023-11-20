@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 const index = () => {
+  const { t } = useTranslation();
   return (
     <div className="grid gap-10 mt-10">
       <h1 className="text-center text-3xl px-2 sm:text-5xl font-bold font-serif text-blue-900">
-        Popular places
+        {t("popular_places")}
       </h1>
       <div style={{ transition: "all 900ms ease-in-out 0s", opacity: 1 }}>
         <div className="grid lg:grid-cols-10 gap-2 md:grid-cols-12">

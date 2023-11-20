@@ -1,9 +1,12 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 const index = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-4/5 m-auto cursor-default my-10">
-      <h1 className="text-4xl font-bold font-serif text-center">About</h1>
+      <h1 className="text-4xl font-bold font-serif text-center">
+        {t("about_us")}
+      </h1>
       <div className="w-full m-auto flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-10">
         <div data-aos="fade-right" className="w-full space-y-5">
           <img
@@ -50,7 +53,7 @@ const index = () => {
         />
         <div className="w-full h-full absolute top-0 flex justify-center items-center">
           <h1 className="text-4xl text-white font-bold px-5 py-2 border cursor-pointer hover:bg-white hover:text-gray-500 hover:duration-300">
-            View in map
+            {t("view_in_map")}
           </h1>
         </div>
       </div>

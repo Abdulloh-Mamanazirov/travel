@@ -1,7 +1,8 @@
 import AOS from "aos";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   About,
   Cities,
@@ -10,6 +11,7 @@ import {
   Showcase,
   Uzbekistan,
 } from "./components";
+import { Eng, Rus, Uzb } from "../../assets";
 
 const index = () => {
   const showcase = useRef();
@@ -18,7 +20,9 @@ const index = () => {
   const hotels = useRef();
   const contact = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -66,7 +70,10 @@ const index = () => {
                 alt="company logo"
                 className="w-24 drop-shadow-lg"
               />
-              <h1 className="sm:text-xl md:text-3xl font-semibold font-agbalumo">
+              <h1
+                translate="no"
+                className="sm:text-xl md:text-3xl font-semibold font-agbalumo"
+              >
                 COMPANY
               </h1>
             </div>
@@ -76,36 +83,93 @@ const index = () => {
               onClick={() => scrollToSection(showcase)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
-              Home
+              {t("Nav_Home_Link")}
             </Link>
             <p className="text-xl">|</p>
             <Link
               onClick={() => scrollToSection(about)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
-              About
+              {t("Nav_About_Link")}
             </Link>
             <p className="text-xl">|</p>
             <Link
               onClick={() => scrollToSection(gallery)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
-              Gallery
+              {t("Nav_Gallery_Link")}
             </Link>
             <p className="text-xl">|</p>
             <Link
               onClick={() => scrollToSection(hotels)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
-              Hotels
+              {t("Nav_Hotels_Link")}
             </Link>
             <p className="text-xl">|</p>
             <Link
               onClick={() => scrollToSection(contact)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
-              Contact
+              {t("Nav_Contact_Link")}
             </Link>
+            <p className="text-xl">|</p>
+            <button
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              className="inline-flex gap-2 items-center font-semibold border px-3 py-[6px] rounded-lg bg-white"
+            >
+              <span className="fa-solid fa-globe text-blue-700" />
+              {i18n.language === "uz"
+                ? "O'zbek"
+                : i18n.language === "en"
+                ? "English"
+                : i18n.language === "ru"
+                ? "Russian"
+                : "Languge"}
+            </button>
+            {isLanguageOpen && (
+              <div
+                className="origin-top-right absolute right-0 top-16 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                role="menu"
+                aria-orientation="vertical"
+              >
+                <div className="py-1 grid grid-cols-1 gap-2 px-1" role="none">
+                  <button
+                    onClick={() => {
+                      i18n.changeLanguage("uz");
+                      setIsLanguageOpen(false);
+                    }}
+                    className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                    role="menuitem"
+                  >
+                    <img src={Uzb} className="w-5 aspect-square rounded-full" />
+                    <span className="truncate">O'zbek</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      i18n.changeLanguage("en");
+                      setIsLanguageOpen(false);
+                    }}
+                    className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                    role="menuitem"
+                  >
+                    <img src={Eng} className="w-5 aspect-square rounded-full" />
+                    <span className="truncate">English</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      i18n.changeLanguage("ru");
+                      setIsLanguageOpen(false);
+                    }}
+                    className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                    role="menuitem"
+                  >
+                    <img src={Rus} className="w-5 aspect-square rounded-full" />
+                    <span className="truncate">Русский</span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
           <button
             className="block md:hidden"
@@ -128,7 +192,7 @@ const index = () => {
                 }}
                 className="text-xl"
               >
-                Home
+                {t("Nav_Home_Link")}
               </Link>
               <Link
                 onClick={() => {
@@ -137,7 +201,7 @@ const index = () => {
                 }}
                 className="text-xl"
               >
-                About
+                {t("Nav_About_Link")}
               </Link>
               <Link
                 onClick={() => {
@@ -146,7 +210,7 @@ const index = () => {
                 }}
                 className="text-xl"
               >
-                Gallery
+                {t("Nav_Gallery_Link")}
               </Link>
               <Link
                 onClick={() => {
@@ -155,7 +219,7 @@ const index = () => {
                 }}
                 className="text-xl"
               >
-                Hotels
+                {t("Nav_Hotels_Link")}
               </Link>
               <Link
                 onClick={() => {
@@ -164,8 +228,76 @@ const index = () => {
                 }}
                 className="text-xl"
               >
-                Contact
+                {t("Nav_Contact_Link")}
               </Link>
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="relative inline-flex gap-2 items-center font-semibold border px-3 py-[6px] rounded-lg bg-white"
+              >
+                <span className="fa-solid fa-globe text-blue-700" />
+                {i18n.language === "uz"
+                  ? "O'zbek"
+                  : i18n.language === "en"
+                  ? "English"
+                  : i18n.language === "ru"
+                  ? "Russian"
+                  : "Languge"}
+                {isLanguageOpen && (
+                  <div
+                    className="origin-top-right absolute right-0 top-10 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    role="menu"
+                    aria-orientation="vertical"
+                  >
+                    <div
+                      className="py-1 grid grid-cols-1 gap-2 px-1"
+                      role="none"
+                    >
+                      <button
+                        onClick={() => {
+                          i18n.changeLanguage("uz");
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                        role="menuitem"
+                      >
+                        <img
+                          src={Uzb}
+                          className="w-5 aspect-square rounded-full"
+                        />
+                        <span className="truncate">O'zbek</span>
+                      </button>
+                      <button
+                        onClick={() => {
+                          i18n.changeLanguage("en");
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                        role="menuitem"
+                      >
+                        <img
+                          src={Eng}
+                          className="w-5 aspect-square rounded-full"
+                        />
+                        <span className="truncate">English</span>
+                      </button>
+                      <button
+                        onClick={() => {
+                          i18n.changeLanguage("ru");
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                        role="menuitem"
+                      >
+                        <img
+                          src={Rus}
+                          className="w-5 aspect-square rounded-full"
+                        />
+                        <span className="truncate">Русский</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </button>
             </div>
           </div>
         )}
@@ -201,7 +333,9 @@ const index = () => {
       <footer className="w-4/5 m-auto py-10 cursor-default">
         <div className="md:flex md:justify-between sm:grid sm:grid-cols-2 sm:justify-center items-start my-10">
           <div className="space-y-5 py-5 border-b">
-            <h1 className="text-3xl font-bold cursor-pointer">COMPANY</h1>
+            <h1 translate="no" className="text-3xl font-bold cursor-pointer">
+              COMPANY
+            </h1>
             <div className="flex items-center space-x-2">
               <span className="fa-solid fa-phone" />
               <p>(898)-645-434</p>
@@ -248,31 +382,31 @@ const index = () => {
                 onClick={() => scrollToSection(showcase)}
                 className="text-base font-semibold hover:underline"
               >
-                Home
+                {t("Nav_Home_Link")}
               </Link>
               <Link
                 onClick={() => scrollToSection(about)}
                 className="text-base font-semibold hover:underline"
               >
-                About
+                {t("Nav_About_Link")}
               </Link>
               <Link
                 onClick={() => scrollToSection(gallery)}
                 className="text-base font-semibold hover:underline"
               >
-                Gallery
+                {t("Nav_Gallery_Link")}
               </Link>
               <Link
                 onClick={() => scrollToSection(hotels)}
                 className="text-base font-semibold hover:underline"
               >
-                Hotels
+                {t("Nav_Hotels_Link")}
               </Link>
               <Link
                 onClick={() => scrollToSection(contact)}
                 className="text-base font-semibold hover:underline"
               >
-                Contact
+                {t("Nav_Contact_Link")}
               </Link>
             </div>
           </div>
