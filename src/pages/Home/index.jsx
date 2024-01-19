@@ -70,12 +70,15 @@ const index = () => {
                 alt="company logo"
                 className="w-24 drop-shadow-lg"
               />
-              <h1
-                translate="no"
-                className="sm:text-xl md:text-3xl font-semibold font-agbalumo"
-              >
-                COMPANY
-              </h1>
+              <div className="flex flex-col font-agbalumo">
+                <h1
+                  translate="no"
+                  className="sm:text-xl md:text-3xl font-semibold"
+                >
+                  Shuhrat
+                </h1>
+                <p>tour</p>
+              </div>
             </div>
           </Link>
           <div className="hidden md:flex items-center gap-3">
@@ -108,6 +111,16 @@ const index = () => {
             </Link>
             <p className="text-xl">|</p>
             <Link
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              to={"/flights"}
+              className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
+            >
+              {t("Nav_Flights_Link")}
+            </Link>
+            <p className="text-xl">|</p>
+            <Link
               onClick={() => scrollToSection(contact)}
               className="text-xl font-semibold border px-3 py-1 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm hover:bg-gray-200"
             >
@@ -118,7 +131,19 @@ const index = () => {
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="inline-flex gap-2 items-center font-semibold border px-3 py-[6px] rounded-lg bg-white"
             >
-              <span className="fa-solid fa-globe text-blue-700" />
+              <img
+                src={
+                  i18n.language === "uz"
+                    ? Uzb
+                    : i18n.language === "en"
+                    ? Eng
+                    : i18n.language === "ru"
+                    ? Rus
+                    : null
+                }
+                className="w-5 aspect-square rounded-full"
+              />
+
               {i18n.language === "uz"
                 ? "O'zbek"
                 : i18n.language === "en"
@@ -223,6 +248,15 @@ const index = () => {
               </Link>
               <Link
                 onClick={() => {
+                  setIsOpen(false);
+                }}
+                to={"/flights"}
+                className="text-xl"
+              >
+                {t("Nav_Flights_Link")}
+              </Link>
+              <Link
+                onClick={() => {
                   scrollToSection(contact);
                   setIsOpen(false);
                 }}
@@ -234,7 +268,18 @@ const index = () => {
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                 className="relative inline-flex gap-2 items-center font-semibold border px-3 py-[6px] rounded-lg bg-white"
               >
-                <span className="fa-solid fa-globe text-blue-700" />
+                <img
+                  src={
+                    i18n.language === "uz"
+                      ? Uzb
+                      : i18n.language === "en"
+                      ? Eng
+                      : i18n.language === "ru"
+                      ? Rus
+                      : null
+                  }
+                  className="w-5 aspect-square rounded-full"
+                />
                 {i18n.language === "uz"
                   ? "O'zbek"
                   : i18n.language === "en"
@@ -333,9 +378,15 @@ const index = () => {
       <footer className="w-4/5 m-auto py-10 cursor-default">
         <div className="md:flex md:justify-between sm:grid sm:grid-cols-2 sm:justify-center items-start my-10">
           <div className="space-y-5 py-5 border-b">
-            <h1 translate="no" className="text-3xl font-bold cursor-pointer">
-              COMPANY
-            </h1>
+            <div className="flex flex-col">
+              <h1
+                translate="no"
+                className="sm:text-xl md:text-3xl font-semibold"
+              >
+                Shuhrat
+              </h1>
+              <p>tour</p>
+            </div>
             <div className="flex items-center space-x-2">
               <span className="fa-solid fa-phone" />
               <p>(898)-645-434</p>
@@ -376,7 +427,7 @@ const index = () => {
           </div>
 
           <div className="py-5 border-b">
-            <h3 className="text-xl font-bold cursor-pointer">Site map</h3>
+            <h3 className="text-xl font-bold cursor-pointer mb-5">Site map</h3>
             <div className="flex flex-col gap-3">
               <Link
                 onClick={() => scrollToSection(showcase)}

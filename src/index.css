@@ -2,21 +2,21 @@
 @tailwind utilities;
 @tailwind components;
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 5px;
   box-shadow: inset 0 0 10px rgba(0, 35, 73, 0.43);
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #006885, #000068);
   border-radius: 10px;
 }
 
 .navbar {
-    position: absolute;
-    top: 0;
-    z-index: 50;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  width: 100%;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -25,4 +25,20 @@ body::-webkit-scrollbar-thumb{
   background-color: #ffffff80;
   position: fixed;
   backdrop-filter: blur(0.5);
+}
+
+.bg-gradient-black-transparent {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media screen and (min-width: 640px) {
+  .bg-gradient-black-transparent {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
 }

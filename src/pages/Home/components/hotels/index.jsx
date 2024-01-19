@@ -1,237 +1,40 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { HotelCard } from "../../../../components";
 
 const index = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="my-16 text-center px-3">
-        <h1 className="text-4xl font-bold font-serif">{t("hotels_title")}</h1>
-        <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-10 my-10 justify-items-center items-center pb-10 border-b">
-          <div
-            data-aos="fade-right"
-            data-aos-delay="100"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/95/07/limak-eurasia-luxury.jpg?w=700&h=-1&s=1"
-              alt=""
+      <div className="my-16 px-3">
+        <h1 className="text-2xl md:text-4xl text-center font-bold font-serif">
+          {t("hotels_title")}
+        </h1>
+        <section className="grid md:grid-cols-2 gap-10 my-10 pb-10 border-b">
+          {new Array(4).fill(null).map((_, ind) => (
+            <HotelCard
+              key={ind}
+              image={
+                "https://www.citystyleandliving.com/wordpress/wp-content/uploads/2019/01/outside.jpg"
+              }
+              title="The best hotel"
+              days={3}
+              desc={"lorem ipsum dolor sit amet qwerty, olgo"}
+              location={"London"}
+              price={"300"}
+              stars={5}
+              features={["Good", "Better", "The best"]}
             />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="200"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a1/9c/80/essentia-luxury-hotel.jpg?w=700&h=-1&s=1"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="300"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://content.r9cdn.net/rimg/himg/87/41/9b/ice-415319-100973255-620733.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="400"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://www.hunguesthotels.hu/_img/16806797506206_s1.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="100"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/95/07/limak-eurasia-luxury.jpg?w=700&h=-1&s=1"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="200"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a1/9c/80/essentia-luxury-hotel.jpg?w=700&h=-1&s=1"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="300"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://content.r9cdn.net/rimg/himg/87/41/9b/ice-415319-100973255-620733.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="400"
-            className="drop-shadow-2xl text-left rounded space-y-2 bg-white cursor-pointer opacity-80 hover:opacity-100 duration-200"
-          >
-            <img
-              className="aspect-video w-full h-1/2 object-cover rounded-t-lg"
-              src="https://www.hunguesthotels.hu/_img/16806797506206_s1.jpg"
-              alt=""
-            />
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
-                <p className="text-sm text-red-400">Lorem, ipsum.</p>
-                <p className="font-bold">$500</p>
-              </div>
-              <p className="font-semibold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facere!
-              </p>
-              <div className="flex justify-between items-center">
-                <h2>15 days tour</h2>
-                <p className="flex items-center space-x-2 text-orange-400">
-                  <span className="fa-solid fa-star" />
-                  <span>4.8</span>
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </section>
+        <div className="flex items-center justify-center">
+          <Link
+            to={"/hotels"}
+            className="w-full px-10 py-3 text-center border-2 rounded-md text-white bg-sky-600"
+          >
+            {t("see_more")}
+          </Link>
+        </div>
       </div>
 
       <div className="px-5 flex justify-between items-center xl:h-[500px]">

@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, Keyboard } from "swiper/modules";
 import {
   Dubai,
-  Japan,
   Kazakhstan,
   Moscow,
   Mountain,
@@ -33,13 +32,11 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Dubai Skyline
             </h2>
-            <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+            <p className="font-medium text-sm sm:text-base mt-2">
+              The Burj Khalifa, the world’s tallest building, dominates the
+              stunning view of Dubai’s urban and natural landscape.
             </p>
           </div>
           <img
@@ -52,32 +49,12 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Golden Mosque
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
-            </p>
-          </div>
-          <img
-            src={Japan}
-            alt="Japan"
-            draggable={false}
-            className="select-none h-full w-screen object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide className="relative">
-          <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
-            </h2>
-            <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+              All images Nur-Astana Mosque Mosque in Kazakhstan The Nur-Astana
+              Mosque, is a mosque in Astana, Kazakhstan. It is third largest
+              mosque in Central Asia.
             </p>
           </div>
           <img
@@ -90,13 +67,12 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Red square
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+              Red Square is one of the oldest and largest squares in Moscow, the
+              capital of Russia. It is located in Moscow's historic centre, in
+              the eastern walls of the Kremlin.
             </p>
           </div>
           <img
@@ -109,13 +85,11 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Serene Bay View
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+              A tranquil scene at a bay surrounded by towering green mountains,
+              with boats gently floating on the calm waters
             </p>
           </div>
           <img
@@ -128,13 +102,12 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Istanbul Skyline
             </h2>
-            <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+            <p className="font-medium text-sm sm:text-base mt-2">
+              A stunning view of Istanbul’s skyline, featuring the iconic Hagia
+              Sophia mosque and its four minarets, contrasted by the modern
+              buildings and the colorful sky.
             </p>
           </div>
           <img
@@ -147,13 +120,11 @@ const index = () => {
         <SwiperSlide className="relative">
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Some title here
+              Travel Uzbeksitan
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium eveniet aspernatur quis numquam expedita ipsum
-              distinctio reprehenderit consequuntur, eum eos, ipsam impedit
-              dolore explicabo fugit saepe, necessitatibus ut nemo! Rem.
+              Travel across Uzbekistan. Visit the most popular, modern and, at
+              the same time historic places with us.
             </p>
           </div>
           <img

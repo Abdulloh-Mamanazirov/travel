@@ -4,5 +4,6 @@ import Cities from "./cities";
 import About from "./about";
 import Hotels from "./hotels";
 import Contact from "./contact";
+import Footer from "./footer";
 
-export { Showcase, Uzbekistan, Cities, About, Hotels, Contact };
+export { Showcase, Uzbekistan, Cities, About, Hotels, Contact, Footer };
