@@ -46,24 +46,19 @@ const index = () => {
           <img
             className="aspect-video w-full h-full object-cover"
             src="https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg"
-            alt=""
+            alt="Shuhrat tour"
           />
         </div>
         <div
           data-aos="fade-up"
           className="xl:w-[500px] p-5 text-center space-y-5 sm:space-y-2"
         >
-          <h1 className="md:text-xl sm:text-sm">Lorem ipsum dolor sit.</h1>
-          <h2 className="md:text-4xl sm:text-base">
-            Lorem ipsum dolor sitamet.
-          </h2>
+          <h2 className="md:text-4xl sm:text-base">Shuhrat tour</h2>
           <p className="md:text-base sm:text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rem
-            perspiciatis quod.orem ipsum dolor sit amet consectetur adipisicing
-            elit. Tempore rem perspiciatis quod.
+            Book your journey now. Feel the true joy of travelling with us.
           </p>
           <button className="mt-5 px-5 py-2 border border-black hover:bg-gray-400 hover:duration-300">
-            Book Now
+            {t("book_now")}
           </button>
         </div>
         <div
