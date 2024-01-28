@@ -32,7 +32,7 @@ const index = () => {
             <div className="flex flex-col font-agbalumo">
               <h1
                 translate="no"
-                className="sm:text-xl md:text-3xl font-semibold"
+                className="text-2xl md:text-3xl font-semibold"
               >
                 Shuhrat
               </h1>

@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import {
   AdminHotels,
@@ -6,6 +6,7 @@ import {
   AdminFlights,
   AddFlight,
   AdminHome,
+  Login,
 } from "./adminPages";
 import { Booking, Home, Hotels, Tours } from "./pages";
 
@@ -14,6 +15,12 @@ function App() {
 
   useLayoutEffect(() => {
     window.scrollTo({ left: 0, top: 0 });
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pathname.includes("admin") && !sessionStorage.getItem("travel-token")) {
+      return window.location.replace("/login");
+    }
   }, [pathname]);
 
   return (
@@ -28,6 +35,7 @@ function App() {
         <Route path="/admin/hotels/add" element={<AddHotel />} />
         <Route path="/admin/flights" element={<AdminFlights />} />
         <Route path="/admin/flights/add" element={<AddFlight />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/admin/*" element={<AdminHome />} />
         <Route path="/*" element={<Home />} />
       </Routes>
