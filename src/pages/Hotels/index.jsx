@@ -1,9 +1,26 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { HotelCard, Navbar } from "../../components";
+import { IMAGE_URL } from "../../constants";
 
 const index = () => {
   const { t } = useTranslation();
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    try {
+      let res = await axios("/hotels");
+      setData(res?.data);
+    } catch (error) {
+      return;
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
@@ -16,20 +33,23 @@ const index = () => {
         </h3>
         <p className="text-lg mx-auto w-full md:w-1/3">{t("hotels_desc")}</p>
       </div>
+      {data?.length === 0 && (
+        <div className="text-center mt-16">
+          <span className="fa-solid fa-box-open text-5xl text-gray-400" />
+          <h3 className="text-2xl text-gray-700">Mehmonxonalar mavjud emas</h3>
+        </div>
+      )}
       <div className="grid mx-auto mb-10 md:grid-cols-2 gap-5 w-11/12 md:w-10/12">
-        {new Array(6).fill(null).map((_, ind) => (
+        {data?.map?.((item) => (
           <HotelCard
-            key={ind}
-            image={
-              "https://www.citystyleandliving.com/wordpress/wp-content/uploads/2019/01/outside.jpg"
-            }
-            title="The best hotel"
-            days={3}
-            desc={"lorem ipsum dolor sit amet qwerty, olgo"}
-            location={"London"}
-            price={"300"}
-            stars={5}
-            features={["Good", "Better", "The best"]}
+            key={item?.id}
+            image={IMAGE_URL + item?.image}
+            title={item?.title}
+            desc={item?.description}
+            location={item?.location}
+            price={item?.price}
+            stars={item?.stars}
+            features={JSON.parse(item?.features)}
           />
         ))}
       </div>

@@ -7,15 +7,15 @@ const index = ({
   stars,
   desc,
   price,
-  days,
   location,
   features,
+  component,
 }) => {
   Aos.init();
   return (
     <div
       data-aos="fade-up"
-      className="w-full shadow-lg max-w-2xl bg-white sm:flex"
+      className="relative w-full shadow-lg max-w-2xl bg-white sm:flex"
     >
       <div className="w-full sm:w-1/4 hotel-cover bg-center bg-cover border relative h-48 sm:h-auto shadow-inner">
         <img
@@ -85,14 +85,15 @@ const index = ({
           </ul> */}
         </div>
       </div>
-      <div className="w-full sm:w-3/4 p-3">
+      <dv className="w-full sm:w-3/4 p-3">
         <div className="flex justify-between items-center border-b pb-3">
           <div>
             <div className="sm:flex items-center mb-1">
               <h2 className="text-lg font-semibold text-gray-600">{title}</h2>
               <div className="flex sm:ml-3">
-                {new Array(stars).fill(null).map(() => (
+                {new Array(stars).fill(null).map((_, ind) => (
                   <svg
+                    key={ind}
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
@@ -131,7 +132,7 @@ const index = ({
           </div>
           <div>
             <div className="text-right text-xl leading-tight text-gray-600 font-semibold">
-              $ {price} <br /> {days} days
+              {!price?.includes?.("$") && "$"} {price}
             </div>
           </div>
         </div>
@@ -162,7 +163,8 @@ const index = ({
             <li key={ind}>{i}</li>
           ))}
         </ul>
-      </div>
+      </dv>
+      {component}
     </div>
   );
 };

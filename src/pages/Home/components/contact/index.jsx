@@ -1,7 +1,31 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
+import { sendMessage } from "../../../../functions";
 
 const index = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+    let { name, phone, message } = e.target;
+
+    const response = await sendMessage(
+      1844389500,
+      `● Ism: ${name.value}                                                                                                                                                   ● Telefon: ${phone.value}                                                                                                                                                   ● Xabar: ${message.value} 
+    `
+    ).finally(() => setLoading(false));
+
+    if (response.ok) {
+      e.target.reset();
+      toast.success("Xabaringiz muvaffaqiyatli yuborildi!");
+    } else {
+      toast.error("Xabaringizni yuborishda xato!");
+    }
+  }
+
   return (
     <>
       <section className="text-gray-600 body-font relative">
@@ -14,11 +38,12 @@ const index = () => {
             marginWidth="0"
             title="map"
             scrolling="no"
-            src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5988.4864556469665!2d69.26883300000001!3d41.3688!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIyJzA3LjciTiA2OcKwMTYnMDcuOCJF!5e0!3m2!1sen!2s!4v1706353985862!5m2!1sen!2s"
           ></iframe>
         </div>
         <div className="container px-5 py-24 mx-auto flex">
-          <div
+          <form
+            onSubmit={handleSubmit}
             data-aos="fade-up"
             data-aos-offset="340"
             data-aos-duration="700"
@@ -67,11 +92,19 @@ const index = () => {
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              {t("contact_send")}
+            <button
+              disabled={loading}
+              className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              type="submit"
+            >
+              {loading ? (
+                <span className="fa-solid fa-spinner fa-spin-pulse" />
+              ) : (
+                t("contact_send")
+              )}
             </button>
             <p className="text-xs text-gray-500 mt-3">{t("contact_desc")}</p>
-          </div>
+          </form>
         </div>
       </section>
     </>

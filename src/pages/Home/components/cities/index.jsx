@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Dubai, Moscow, Turkey, Thailand } from "../../../../assets";
 
 const index = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ const index = () => {
             data-aos="fade-up"
             className="lg:col-span-2 md:col-span-3 sx:col-span-12 sx:h-80 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
-              backgroundImage: `url("https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSWpM_hQozSYzMswAjEAjY6nQMr6nsfd7OqoV5i4gKmBGOVysC8c7WpP9V9vh-2sG82yEyIPMo03zHNRRNOX7iFigEic4FkxwFgwKUdOw")`,
+              backgroundImage: `url(${Dubai})`,
               backgroundPosition: " center center",
               backgroundSize: "cover",
             }}
@@ -39,8 +40,7 @@ const index = () => {
             data-aos="fade-up"
             className="lg:col-span-2 lg:h-80 md:col-span-1 sx:col-span-12 sx:h-0 bg-gradient-to-br from-blue-900 to-sky-700"
             style={{
-              backgroundImage: `url(
-                "https://lh4.googleusercontent.com/proxy/-SEydC6Y6JlSPT37VLGdEXorctSy_SOdytHJ7bWxwTGwu4JT4i2grVDmVBv84Fc1fOad-e-cqHy228WqOxFNZ40I2C2RjoUb7tkRe_aQuK6Um79M-py5ntHnRsVTnsRhtWMFK19PCfZ68sG_nvbp3DvKdijTyA=w675-h390-n-k-no"
+              backgroundImage: `url(${Moscow}
               )`,
               backgroundPosition: " center center",
               backgroundSize: "cover",
@@ -65,9 +65,7 @@ const index = () => {
             data-aos="fade-up"
             className="lg:col-span-4 md:col-span-5 sx:col-span-12 md:justify-center h-80 grid p-4 justify-center items-center"
             style={{
-              backgroundImage: `url(
-                "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSB8BXHMEBzFDUx_s6yghLO1nCilWpt9hku5TMkuUW4ca-MIpvxo7AGlcP1sSbcXezLTM2EJ4q6oATGne4D0QugG7cjf7ObbvcP5HgMdEw"
-              )`,
+              backgroundImage: `url(${Turkey})`,
               backgroundPosition: " center center",
               backgroundSize: " cover",
             }}

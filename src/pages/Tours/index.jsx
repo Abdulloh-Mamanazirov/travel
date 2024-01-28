@@ -1,9 +1,25 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { FlightCard, Navbar } from "../../components";
 
 const index = () => {
   const { t } = useTranslation();
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    try {
+      let res = await axios("/flights");
+      setData(res?.data);
+    } catch (error) {
+      return;
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
@@ -16,19 +32,25 @@ const index = () => {
         </h3>
         <p className="text-lg mx-auto w-full md:w-1/3">{t("flights_desc")}</p>
       </div>
+      {data?.length === 0 && (
+        <div className="text-center mt-16">
+          <span className="fa-solid fa-box-open text-5xl text-gray-400" />
+          <h3 className="text-3xl text-gray-700">Parvozlar mavjud emas</h3>
+        </div>
+      )}
       <div className="grid mx-auto mb-10 md:grid-cols-2 gap-5 w-11/12 md:w-10/12">
-        {new Array(6).fill(null).map((_, ind) => (
+        {data?.map?.((item) => (
           <FlightCard
-            key={ind}
-            airways={"Uzbekistan airways"}
-            date={"Wednesday 14 April"}
-            from={"Tashkent"}
-            from_time={"10:00"}
-            to={"Istanbul"}
-            to_time={"15:00"}
-            kg={5}
-            klas={"Ekonom"}
-            price={200}
+            key={item?.id}
+            airways={item?.airways}
+            date={item?.date}
+            from={item?.from_place}
+            from_time={item?.from_time}
+            to={item?.to_place}
+            to_time={item?.to_time}
+            kg={item?.flight_time}
+            klas={item?.class}
+            price={item?.price}
           />
         ))}
       </div>

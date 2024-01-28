@@ -8,8 +8,11 @@ import {
   Turkey,
   Uzbekistan,
 } from "../../../../assets";
+import { useTranslation } from "react-i18next";
 
 const index = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Swiper
@@ -33,12 +36,9 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Travel Uzbeksitan
+              {t("uzb_title")}
             </h2>
-            <p className="font-medium text-sm sm:text-base">
-              Travel across Uzbekistan. Visit the most popular, modern and, at
-              the same time historic places with us.
-            </p>
+            <p className="font-medium text-sm sm:text-base">{t("uzb_desc")}</p>
           </div>
           <img
             src={Uzbekistan}
@@ -51,11 +51,10 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Dubai Skyline
+              {t("dubai_title")}
             </h2>
             <p className="font-medium text-sm sm:text-base mt-2">
-              The Burj Khalifa, the world’s tallest building, dominates the
-              stunning view of Dubai’s urban and natural landscape.
+              {t("dubai_desc")}
             </p>
           </div>
           <img
@@ -69,12 +68,10 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Golden Mosque
+              {t("astana_title")}
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              All images Nur-Astana Mosque Mosque in Kazakhstan The Nur-Astana
-              Mosque, is a mosque in Astana, Kazakhstan. It is third largest
-              mosque in Central Asia.
+              {t("astana_desc")}
             </p>
           </div>
           <img
@@ -88,12 +85,10 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Red square
+              {t("russia_title")}
             </h2>
             <p className="font-medium text-sm sm:text-base">
-              Red Square is one of the oldest and largest squares in Moscow, the
-              capital of Russia. It is located in Moscow's historic centre, in
-              the eastern walls of the Kremlin.
+              {t("russia_desc")}
             </p>
           </div>
           <img
@@ -107,12 +102,9 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Serene Bay View
+              {t("bay_title")}
             </h2>
-            <p className="font-medium text-sm sm:text-base">
-              A tranquil scene at a bay surrounded by towering green mountains,
-              with boats gently floating on the calm waters
-            </p>
+            <p className="font-medium text-sm sm:text-base">{t("bay_desc")}</p>
           </div>
           <img
             src={Mountain}
@@ -125,12 +117,10 @@ const index = () => {
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute bottom-[20%] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-1/2 p-3">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-agbalumo">
-              Istanbul Skyline
+              {t("istanbul_title")}
             </h2>
             <p className="font-medium text-sm sm:text-base mt-2">
-              A stunning view of Istanbul’s skyline, featuring the iconic Hagia
-              Sophia mosque and its four minarets, contrasted by the modern
-              buildings and the colorful sky.
+              {t("istanbul_desc")}
             </p>
           </div>
           <img

@@ -2,16 +2,20 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { sendMessage } from '../../functions'
 
 const index = () => {
   const navigate = useNavigate();
   const { search } = useLocation();
   const [from, setFrom] = useState(null);
   const [to, setTo] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setFrom(
       search
+        .replaceAll("%20", " ")
         .replaceAll("from", "")
         .replaceAll("to", "")
         .replaceAll("?", "")
@@ -20,6 +24,7 @@ const index = () => {
     );
     setTo(
       search
+        .replaceAll("%20", " ")
         .replaceAll("from", "")
         .replaceAll("to", "")
         .replaceAll("?", "")
@@ -30,17 +35,22 @@ const index = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     const { name, phone, from, to, area, region, address } = e.target;
-    const data = {
-      name: name.value,
-      phone: phone.value,
-      from: from.value,
-      to: to.value,
-      area: area.value,
-      region: region.value,
-      address: address.value,
-    };
-    console.log(data);
+
+    const response = await sendMessage(
+      1844389500,
+      `Buyurtma                                                                                                                                            ● Ism Familiya: ${name.value}                                                                                                                                                   ● Telefon: ${phone.value}                                                                                                                                                   ● Qayerdan: ${from.value}                                                                                                                                                   ● Qayerga: ${to.value}                                                                                                                                                   ● Manzil: ${address.value + ", " + region.value + ", " + area.value}
+      `
+    ).finally(() => setLoading(false));
+
+    if (response.ok) {
+      e.target.reset();
+      toast.success("Xabaringiz muvaffaqiyatli yuborildi!");
+      navigate('/')
+    } else {
+      toast.error("Xabaringizni yuborishda xato!");
+    }
   }
 
   return (
@@ -161,8 +171,16 @@ const index = () => {
               >
                 <span className="fa-solid fa-arrow-left" />
               </button>
-              <button className="col-span-3 hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
-                Buyurtma berish
+              <button
+              disabled={loading}
+                className="col-span-3 hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                type="submit"
+              >
+                {loading ? (
+                  <span className="fa-solid fa-spinner fa-spin-pulse" />
+                ) : (
+                  "Buyurtma berish"
+                )}
               </button>
             </div>
           </form>

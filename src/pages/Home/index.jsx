@@ -70,7 +70,7 @@ const index = () => {
                 alt="company logo"
                 className="w-24 drop-shadow-lg"
               />
-              <div className="flex flex-col font-agbalumo">
+              <div className="flex flex-col font-agbalumo bg-white/50 backdrop-blur-md rounded-xl px-2">
                 <h1
                   translate="no"
                   className="sm:text-xl md:text-3xl font-semibold"
