@@ -66,18 +66,28 @@ const index = () => {
                 </h1>
                 <p>tour</p>
               </div>
-              <div className="flex items-center space-x-2">
+              <a
+                href="mailto:surikpurik2gmail.com"
+                className="flex items-center space-x-2"
+              >
+                <span className="fa-solid fa-envelope" />
+                <p>Gmail</p>
+              </a>
+              <a
+                href="tel:+998997416611"
+                className="flex items-center space-x-2"
+              >
                 <span className="fa-solid fa-phone" />
-                <p>(898)-645-434</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="fa-solid fa-message" />
-                <p>(898)-645-434</p>
-              </div>
-              <div className="flex items-center space-x-2">
+                <p>+998997416611</p>
+              </a>
+              <a
+                href="https://www.google.com/maps/place/41%C2%B022'07.7%22N+69%C2%B016'07.8%22E/@41.3688,69.268833,16z/data=!4m4!3m3!8m2!3d41.3688!4d69.268833?entry=ttu"
+                target={"_blank"}
+                className="flex items-center space-x-2"
+              >
                 <span className="fa-solid fa-location-dot" />
-                <p>Namangan</p>
-              </div>
+                <p>Yunusobod, Tashkent</p>
+              </a>
             </div>
 
             <div className="space-y-5 py-5 border-b">
@@ -90,17 +100,14 @@ const index = () => {
                 Social media
               </h3>
               <div className="flex sm:justify-center space-x-5">
-                <a href="https://www.facebook.com" target={"_blank"}>
-                  <span className="fa-solid fa-brands fa-facebook text-xl cursor-pointer hover:text-blue-600" />
-                </a>
-                <a href="https://www.instagram.com" target={"_blank"}>
+                <a
+                  href="https://www.instagram.com/shuhrattour.uz"
+                  target={"_blank"}
+                >
                   <span className="fa-solid fa-brands fa-instagram text-xl cursor-pointer hover:text-pink-500" />
                 </a>
-                <a href="https://www.twitter.com" target={"_blank"}>
-                  <span className="fa-solid fa-brands fa-twitter text-xl cursor-pointer hover:text-sky-500" />
-                </a>
-                <a href="https://www.telegram.org" target={"_blank"}>
-                  <span className="fa-solid fa-paper-plane text-xl cursor-pointer hover:text-blue-500" />
+                <a href="https://t.me/shuhrattour" target={"_blank"}>
+                  <span className="fa-brands fa-telegram text-xl cursor-pointer hover:text-blue-500" />
                 </a>
               </div>
             </div>
