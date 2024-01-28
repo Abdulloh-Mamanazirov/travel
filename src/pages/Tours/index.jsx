@@ -23,6 +23,14 @@ const index = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Shuhrat Tour • Parvozlar</title>
+        <meta
+          name="description"
+          content="Shuhrat Tour da mavjud reyslar. Osiyo bo'ylab sayohat"
+        />
+        <link rel="canonical" href="/flights" />
+      </Helmet>
       <div className="mb-28">
         <Navbar />
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { sendMessage } from '../../functions'
@@ -55,6 +56,14 @@ const index = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Shuhrat Tour • Buyurtma berish</title>
+        <meta
+          name="description"
+          content="Shuhrat Tour bilan dunyo bo'ylab sayohat qiling."
+        />
+        <link rel="canonical" href="/booking" />
+      </Helmet>
       <div className="flex items-center justify-center p-12">
         <div className="mx-auto w-full max-w-[550px] bg-white">
           <form onSubmit={handleSubmit}>
@@ -172,7 +181,7 @@ const index = () => {
                 <span className="fa-solid fa-arrow-left" />
               </button>
               <button
-              disabled={loading}
+                disabled={loading}
                 className="col-span-3 hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
                 type="submit"
               >
