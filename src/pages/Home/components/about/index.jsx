@@ -10,11 +10,13 @@ const index = () => {
       </h1>
       <div className="w-full m-auto flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-10">
         <div data-aos="fade-right" className="w-full space-y-5">
-          <img
-            className="w-full drop-shadow-2xl h-80 object-cover rounded-lg border-8 border-stones-700 cursor-pointer opacity-80 hover:opacity-100 duration-200"
-            src={Azerbaijan}
-            alt="Shuhrat tour"
-          />
+          <div className="h-80 grid place-items-center drop-shadow-2xl rounded-lg border-8 border-stones-700 cursor-pointer opacity-80 hover:opacity-100 duration-200">
+            <img
+              className="h-64 aspect-square"
+              src={"/plane.png"}
+              alt="Shuhrat tour"
+            />
+          </div>
           <div>
             <h2 className="font-bold">Shuhrat Tour -</h2>
             <h1 className="text-2xl font-bold">{t("about1_title")}</h1>

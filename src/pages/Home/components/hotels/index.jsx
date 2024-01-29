@@ -68,13 +68,16 @@ const index = () => {
           data-aos="fade-up"
           className="xl:w-[500px] p-5 text-center space-y-5 md:space-y-2"
         >
-          <h2 className="text-2xl md:text-4xl font-agbalumo sm:text-base">Shuhrat tour</h2>
-          <p className="md:text-base sm:text-xs">
-            {t("flights_desc")}
-          </p>
-          <button className="mt-5 px-5 py-2 border border-black hover:bg-gray-400 hover:duration-300">
+          <h2 className="text-2xl md:text-4xl font-agbalumo sm:text-base">
+            Shuhrat tour
+          </h2>
+          <p className="md:text-base sm:text-xs">{t("flights_desc")}</p>
+          <Link
+            to="/flights"
+            className="block mt-10 px-5 py-2 border border-black hover:bg-gray-400 hover:duration-300 hover:text-white"
+          >
             {t("book_now")}
-          </button>
+          </Link>
         </div>
         <div
           data-aos="fade-down"

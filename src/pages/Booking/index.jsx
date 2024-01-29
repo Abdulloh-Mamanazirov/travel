@@ -40,7 +40,7 @@ const index = () => {
     const { name, phone, from, to, area, region, address } = e.target;
 
     const response = await sendMessage(
-      1844389500,
+      5017220821,
       `Buyurtma                                                                                                                                            ● Ism Familiya: ${name.value}                                                                                                                                                   ● Telefon: ${phone.value}                                                                                                                                                   ● Qayerdan: ${from.value}                                                                                                                                                   ● Qayerga: ${to.value}                                                                                                                                                   ● Manzil: ${address.value + ", " + region.value + ", " + area.value}
       `
     ).finally(() => setLoading(false));

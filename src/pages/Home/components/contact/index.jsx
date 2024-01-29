@@ -13,7 +13,7 @@ const index = () => {
     let { name, phone, message } = e.target;
 
     const response = await sendMessage(
-      1844389500,
+      5017220821,
       `● Ism: ${name.value}                                                                                                                                                   ● Telefon: ${phone.value}                                                                                                                                                   ● Xabar: ${message.value} 
     `
     ).finally(() => setLoading(false));

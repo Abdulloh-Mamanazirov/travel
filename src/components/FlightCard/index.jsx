@@ -13,7 +13,7 @@ const getDateInString = (data) => {
       month = "Yanvar";
       break;
     case 2:
-      month = "Fanvar";
+      month = "Fevral";
       break;
     case 3:
       month = "Mart";
@@ -69,7 +69,7 @@ const getDateInString = (data) => {
     case 6:
       day = "Shanba";
       break;
-    case 7:
+    case 0:
       day = "Yakshanba";
       break;
     default:
