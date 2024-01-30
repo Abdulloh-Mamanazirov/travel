@@ -16,7 +16,7 @@ import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
-axios.defaults.baseURL = "http://80.90.178.223:5000";
+axios.defaults.baseURL = "http://13.51.157.197";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

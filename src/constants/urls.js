@@ -1,1 +1,1 @@
-export const IMAGE_URL = "http://80.90.178.223:5000";
+export const IMAGE_URL = "http://13.51.157.197/";
